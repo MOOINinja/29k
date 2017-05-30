@@ -15,7 +15,7 @@ import FacebookLogin
 struct Variables {
     static var HWPRPoints: [HWPR] = [HWPR!](repeating: HWPR.init(Point: 0, Text: ""), count: 4)
     static var CurrentUser: User? = nil
-    static var UserToken: String = "MTQ5Mzk3NTY0NXxDZ3dBQnpJeE9EQXdNRFE9fOKrXAoIbsVAMwZi5eClW67rIqRiHXnKvrh0_N4MCNZI" // Default value
+    static var UserToken: String = "MTQ5Mzk3NTY0NXxDZ3dBQnpJeE9EQXdNRFE9fOKrXAoIbsVAMwZi5eClW67rIqRiHXnKvrh0_N4MCNZI" // Default  d value
     static var UserId: Int64 = 0 //1030003
     static var FacebookId: String = "" //"10155218634934224"
     static var FacebookToken = ""
