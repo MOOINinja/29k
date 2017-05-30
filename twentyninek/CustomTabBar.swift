@@ -73,7 +73,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
         let feedNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "feed_tab_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "feed_tab_selected").withRenderingMode(.alwaysOriginal), title: "Feed", rootViewController: FeedViewController())
         
 */
-        let viewNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "feed_tab_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "feed_tab_selected").withRenderingMode(.alwaysOriginal), title: "Dummy", rootViewController: ViewController())
+        let viewNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "feed_tab_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "feed_tab_selected").withRenderingMode(.alwaysOriginal), title: "Dummy", rootViewController: ProfileViewController())
         
         tabBar.tintColor = UIColor.rgb(red: 109, green: 93, blue: 190, alpha: 1)
         
