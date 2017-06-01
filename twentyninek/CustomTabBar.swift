@@ -38,17 +38,17 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
     func checkIfUserIsLoggedIn() {
         let defaults = UserDefaults.standard
         
-        defaults.removeObject(forKey: "UserToken")
-        defaults.removeObject(forKey: "UserId")
+        //defaults.removeObject(forKey: "UserToken")
+        //defaults.removeObject(forKey: "UserId")
         
-        if (  defaults.object(forKey: "UserToken") == nil) {
+        //if (  defaults.object(forKey: "UserToken") == nil) {
             //Show if not logged in
             DispatchQueue.main.async {
                 let loginController = StartViewController()
                 self.present(loginController, animated: false, completion: nil)
             }
             return
-        }
+ //       }
 //        else {
 //            let dataHandler = DataHandler()
 //            dataHandler.getUser(userToken: defaults.object(forKey: "UserToken") as! String) { success in }
