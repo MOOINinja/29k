@@ -43,6 +43,8 @@ class StartViewController: UIViewController {
         
         navigationItem.title = "Login"
         
+    
+        
         let theURL = Bundle.main.url(forResource:"29k_appvideo", withExtension: "mp4")
         
         avPlayer = AVPlayer(url: theURL!)
@@ -61,12 +63,50 @@ class StartViewController: UIViewController {
                                                object: avPlayer.currentItem)
         
         
+        
+        // TODO: Check if user already has loggedin and get data from stored data
+        
+        let defaults = UserDefaults.standard
+        let userToken = defaults.object(forKey: "UserToken")
+        if ( userToken != nil ) {
+            AppDelegate.instance().showActivityIndicator()
+            let dataHandler = DataHandler()
+            Variables.UserToken = userToken as! String
+            dataHandler.getUser(userToken: Variables.UserToken) { user in
+                dataHandler.getCourses() { success in  }
+                
+                
+                
+                dataHandler.getCards() { success in
+                    Variables.ShowOnbordingAtStart = true
+                    self.dismiss(animated: false, completion: nil)
+                    
+                    
+                    //DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProfile"), object: nil)
+                    //}
+                    
+                    AppDelegate.instance().dismissActivityIndicator()
+                    if( Variables.userIsTeamster == true) {
+                        dataHandler.getTeamInvites(teamId: (Variables.Teams[Variables.Teams.count-1].id))
+                    }
+                    
+                    dataHandler.orderFindYourFlowStates() { success in }
+                }
+                
+                
+                dataHandler.getAllUsers()
+            }
+            
+            
+        } else {
+        
         // Handle clicks on the button
         loginButton.addTarget(self, action: #selector(logIn), for: .touchUpInside)
         // Add the button to the view
         view.addSubview(loginButton)
         loginButton.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 80, paddingBottom: 30, paddingRight: -80, width: 0, height: 50)
-        
+        }
         
     }
     
