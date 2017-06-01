@@ -30,11 +30,11 @@ class StartViewController: UIViewController {
         return button
     }()
     
-    let bgView: UIImageView = {
+    let logoView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "welcome_screen")
+        view.image = UIImage(named: "Logo_Start")
         view.contentMode = .scaleAspectFill
-        view.backgroundColor = UIColor.rgb(red: 10, green: 10, blue: 10, alpha: 1)
+        //view.backgroundColor = UIColor.rgb(red: 10, green: 10, blue: 10, alpha: 1)
         return view
     }()
     
@@ -42,8 +42,6 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Login"
-        
-    
         
         let theURL = Bundle.main.url(forResource:"29k_appvideo", withExtension: "mp4")
         
@@ -62,10 +60,12 @@ class StartViewController: UIViewController {
                                                name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                                                object: avPlayer.currentItem)
         
-        
+        //LOGO
+        view.addSubview(logoView)
+        logoView.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 80, height: 80)
+        logoView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         // TODO: Check if user already has loggedin and get data from stored data
-        
         let defaults = UserDefaults.standard
         let userToken = defaults.object(forKey: "UserToken")
         if ( userToken != nil ) {
