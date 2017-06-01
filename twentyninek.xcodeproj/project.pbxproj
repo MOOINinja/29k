@@ -19,6 +19,9 @@
 		7856F9C21EDC7BA300CF79A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7856F9C01EDC7BA300CF79A7 /* Main.storyboard */; };
 		7856F9C41EDC7BA300CF79A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7856F9C31EDC7BA300CF79A7 /* Assets.xcassets */; };
 		7856F9C71EDC7BA300CF79A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7856F9C51EDC7BA300CF79A7 /* LaunchScreen.storyboard */; };
+		78B54D0E1EE0026000445346 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B54D0D1EE0026000445346 /* ProfileHeaderCell.swift */; };
+		78B54D101EE0026D00445346 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B54D0F1EE0026D00445346 /* BaseCollectionCell.swift */; };
+		78B54D121EE002C200445346 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B54D111EE002C200445346 /* BaseTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		7856F9C31EDC7BA300CF79A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7856F9C61EDC7BA300CF79A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7856F9C81EDC7BA300CF79A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78B54D0D1EE0026000445346 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		78B54D0F1EE0026D00445346 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
+		78B54D111EE002C200445346 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		99EF3E5741F915309CD862E9 /* Pods-twentyninek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twentyninek.release.xcconfig"; path = "Pods/Target Support Files/Pods-twentyninek/Pods-twentyninek.release.xcconfig"; sourceTree = "<group>"; };
 		D7338A61ED976FBED8B7BABF /* Pods_twentyninek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twentyninek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,17 +98,28 @@
 			isa = PBXGroup;
 			children = (
 				4BE9A09E1EDD698C00675B99 /* Helpers */,
+				78B54D0C1EE0023D00445346 /* Cells */,
 				7856F9BC1EDC7BA300CF79A7 /* AppDelegate.swift */,
 				4BE9A0A71EDD6A1D00675B99 /* CustomTabBar.swift */,
 				4BE9A0A51EDD69EB00675B99 /* StartViewController.swift */,
-				4BD0D5E11EDD6BE3009EEC6C /* 29k_appvideo.mp4 */,
 				7856F9BE1EDC7BA300CF79A7 /* ProfileViewController.swift */,
+				4BD0D5E11EDD6BE3009EEC6C /* 29k_appvideo.mp4 */,
 				7856F9C01EDC7BA300CF79A7 /* Main.storyboard */,
 				7856F9C31EDC7BA300CF79A7 /* Assets.xcassets */,
 				7856F9C51EDC7BA300CF79A7 /* LaunchScreen.storyboard */,
 				7856F9C81EDC7BA300CF79A7 /* Info.plist */,
 			);
 			path = twentyninek;
+			sourceTree = "<group>";
+		};
+		78B54D0C1EE0023D00445346 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78B54D0F1EE0026D00445346 /* BaseCollectionCell.swift */,
+				78B54D111EE002C200445346 /* BaseTableCell.swift */,
+				78B54D0D1EE0026000445346 /* ProfileHeaderCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		A5D2B23A02503772CBD1862D /* Pods */ = {
@@ -240,10 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BE9A0A41EDD69CE00675B99 /* Extensions.swift in Sources */,
+				78B54D101EE0026D00445346 /* BaseCollectionCell.swift in Sources */,
 				7856F9BF1EDC7BA300CF79A7 /* ProfileViewController.swift in Sources */,
 				4BE9A0A81EDD6A1D00675B99 /* CustomTabBar.swift in Sources */,
 				4BE9A0A21EDD69CE00675B99 /* DataHandler.swift in Sources */,
+				78B54D0E1EE0026000445346 /* ProfileHeaderCell.swift in Sources */,
 				7856F9BD1EDC7BA300CF79A7 /* AppDelegate.swift in Sources */,
+				78B54D121EE002C200445346 /* BaseTableCell.swift in Sources */,
 				4BE9A0A31EDD69CE00675B99 /* Dates.swift in Sources */,
 				4BE9A0A61EDD69EB00675B99 /* StartViewController.swift in Sources */,
 			);
