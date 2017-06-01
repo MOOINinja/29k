@@ -56,10 +56,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
     }
 
     func setupViewControllers() {
-        
-        //Start
-        let startNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_tab_icon_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "home_tab_icon_selected").withRenderingMode(.alwaysOriginal), title: "Login", rootViewController: StartViewController())
-/*
+        /*
         //Profile
         let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "profile_tab_icon_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "profile_tab_icon_selected").withRenderingMode(.alwaysOriginal), title: "Home", rootViewController: ProfileViewController(collectionViewLayout: layout))
         
@@ -73,7 +70,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
         let feedNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "feed_tab_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "feed_tab_selected").withRenderingMode(.alwaysOriginal), title: "Feed", rootViewController: FeedViewController())
         
 */
-        let viewNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "feed_tab_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "feed_tab_selected").withRenderingMode(.alwaysOriginal), title: "Dummy", rootViewController: ProfileViewController())
+        let viewNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home_tab_icon_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "home_tab_icon_selected").withRenderingMode(.alwaysOriginal), title: "Home", rootViewController: ProfileViewController())
         
         tabBar.tintColor = UIColor.rgb(red: 109, green: 93, blue: 190, alpha: 1)
         
