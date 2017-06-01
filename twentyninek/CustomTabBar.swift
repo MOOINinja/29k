@@ -36,7 +36,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
     }
     
     func checkIfUserIsLoggedIn() {
-        let defaults = UserDefaults.standard
+        //let defaults = UserDefaults.standard
         
         //defaults.removeObject(forKey: "UserToken")
         //defaults.removeObject(forKey: "UserId")
