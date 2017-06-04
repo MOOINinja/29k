@@ -62,10 +62,10 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
         
         //Team
         let teamNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "team__tab_icon_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "team_tab_icon_selected").withRenderingMode(.alwaysOriginal), title: "Teams", rootViewController: TeamViewController())
-        
+        */
         //Courses
-        let coursesNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "course_tab_icon_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "course_tab_icon_selected").withRenderingMode(.alwaysOriginal), title: "Courses", rootViewController: CourseOutlineViewController(collectionViewLayout: layout))
-        
+        let coursesNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "course_tab_icon_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "course_tab_icon_selected").withRenderingMode(.alwaysOriginal), title: "Courses", rootViewController: CourseOutlineViewController())
+        /*
         //Feed
         let feedNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "feed_tab_unselected").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "feed_tab_selected").withRenderingMode(.alwaysOriginal), title: "Feed", rootViewController: FeedViewController())
         
@@ -74,7 +74,7 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
         
         tabBar.tintColor = UIColor.rgb(red: 109, green: 93, blue: 190, alpha: 1)
         
-        viewControllers = [viewNavController]
+        viewControllers = [viewNavController,coursesNavController]
         
         //tab item insets
         guard let items = tabBar.items else { return }
